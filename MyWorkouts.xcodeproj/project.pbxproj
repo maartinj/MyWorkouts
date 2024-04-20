@@ -25,6 +25,8 @@
 		BBD55D272B5A1E3800440A69 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD55D262B5A1E3800440A69 /* Date+Extension.swift */; };
 		BBD55D2F2B5A4BD000440A69 /* ActivityFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD55D2E2B5A4BD000440A69 /* ActivityFormView.swift */; };
 		E4C874932BD48849008B836A /* StartTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C874922BD48849008B836A /* StartTab.swift */; };
+		E4C874962BD48A51008B836A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C874952BD48A51008B836A /* CalendarView.swift */; };
+		E4C874982BD48B1F008B836A /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C874972BD48B1F008B836A /* CalendarHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		BBD55D262B5A1E3800440A69 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		BBD55D2E2B5A4BD000440A69 /* ActivityFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFormView.swift; sourceTree = "<group>"; };
 		E4C874922BD48849008B836A /* StartTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTab.swift; sourceTree = "<group>"; };
+		E4C874952BD48A51008B836A /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		E4C874972BD48B1F008B836A /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 				BB43F9BD2B5B524400572F74 /* WWorkout Views */,
 				BBD55D252B5A1B0300440A69 /* Models */,
 				BB43F9B62B5B46D900572F74 /* ModalType.swift */,
+				E4C874942BD48A0E008B836A /* Calendar */,
 				BB43F9B52B5B40A000572F74 /* Extensions */,
 				BB511F302B5C3E5900E9CEB7 /* Launch Screen.storyboard */,
 				BBD55D172B5A18F700440A69 /* Assets.xcassets */,
@@ -139,6 +144,15 @@
 				BBD55D232B5A19D700440A69 /* Workout.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E4C874942BD48A0E008B836A /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				E4C874952BD48A51008B836A /* CalendarView.swift */,
+				E4C874972BD48B1F008B836A /* CalendarHeaderView.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB7E64582B5B845000862170 /* WorkoutFormView.swift in Sources */,
+				E4C874982BD48B1F008B836A /* CalendarHeaderView.swift in Sources */,
 				BB43F9B22B5B24E200572F74 /* WorkoutsListView.swift in Sources */,
+				E4C874962BD48A51008B836A /* CalendarView.swift in Sources */,
 				BB43F9AE2B5B0AA400572F74 /* ActivitySymbol.swift in Sources */,
 				E4C874932BD48849008B836A /* StartTab.swift in Sources */,
 				BBD55D272B5A1E3800440A69 /* Date+Extension.swift in Sources */,
