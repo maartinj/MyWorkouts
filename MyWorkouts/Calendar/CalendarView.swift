@@ -12,7 +12,7 @@ import SwiftUI
 
 struct CalendarView: View {
     @State private var color: Color = .blue
-    @State private var date = Date.now
+    let date: Date
     let daysOfWeek = Date.capitalizedFirstLettersOfWeekdays
     let columns = Array(repeating: GridItem(.flexible()), count: 7)
     @State private var days: [Date] = []
@@ -20,9 +20,6 @@ struct CalendarView: View {
         VStack {
             LabeledContent("Calendar Color") {
                 ColorPicker("", selection: $color, supportsOpacity: false)
-            }
-            LabeledContent("Date/Time") {
-                DatePicker("", selection: $date)
             }
             HStack {
                 ForEach(daysOfWeek.indices, id: \.self) { index in
@@ -62,5 +59,5 @@ struct CalendarView: View {
 }
 
 #Preview {
-    CalendarView()
+    CalendarView(date: Date.now)
 }
