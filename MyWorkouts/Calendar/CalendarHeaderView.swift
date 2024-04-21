@@ -14,10 +14,20 @@ struct CalendarHeaderView: View {
     @State private var selectedMonth = Date.now.monthInt
     @State private var selectedYear = Date.now.yearInt
     @Query private var workouts: [Workout]
+    @Query(sort: \Activity.name) private var activities: [Activity]
+    @State private var selectedActivity: Activity?
+
     let months = Date.fullMonthNames
     var body: some View {
         NavigationStack {
             VStack {
+                Picker("",selection: $selectedActivity) {
+                    Text("All").tag(nil as Activity?)
+                    ForEach(activities) { activity in
+                        Text(activity.name).tag(activity as Activity?)
+                    }
+                }
+                .buttonStyle(.borderedProminent)
                 HStack {
                     Picker("",selection: $selectedYear) {
                         ForEach(years, id: \.self) { year in
@@ -31,7 +41,7 @@ struct CalendarHeaderView: View {
                     }
                 }
                 .buttonStyle(.bordered)
-                CalendarView(date: monthDate)
+                CalendarView(date: monthDate, selectedActivity: selectedActivity)
                 Spacer()
             }
             .navigationTitle("Tallies")
